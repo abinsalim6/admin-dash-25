@@ -1,0 +1,55 @@
+                Dashboard - Angular Project Workflow
+
+1. Create project : ng new admin_dashboard
+2. Run project : ng s -o
+3. import/install third party libraries
+    - Install Angular Material - ng add @angular/material
+        -choose prebuild theme
+        -enable topology
+        -enable animation
+            - to use any components from material  
+                -copy the api for particular component and paste it app.Module.ts
+4. Delete all components in Appcomponent.html file
+5. Check wheather 3rd party library working or not
+    if not- add prebulit themes in style.class
+                    @import "../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css";
+6. generate components
+    -header
+        -add icons setings, help, person from fonts.google.com and align flex-end
+        -add a signout button from person icon using menu componenent
+    -footer
+    -sidebar
+     -set profile with icon, name, maild-id
+     -set contents in sidebar as anchor tag and style it
+     -connect anchor tag to corresponding component, for that set a path as object in app-routing.module.ts
+
+    -Dashboard 
+        To set as default page use 
+        {
+            path:"", redirectTo:"Dashboard", pathMatch:"full"
+        }
+        -card
+        -area-chart: using highcharts from web demos-->highchart core demos
+            - npm install highcharts-angular --save
+            - import HighchartsChartModule in app.module.ts
+            - npm install highcharts --save
+            - import * as Highcharts from 'highcharts'; in the ts of whose file 
+            - add html elements
+            - initialise in class 
+                Highcharts = Highcharts
+                chartOptions = {}
+
+        -table
+            -add implemts to class 
+            -for paginator import pagiantor module to ts
+            
+        -piechart
+    -Employees
+    -Gallery
+    -Contact
+    _Leads
+7.components from angular material
+    -sidenav: for splitting into two section sidebar&Dashboard
+    -Toolbar : for header section
+    -menu : for adding sigonut button
+    -divider : provide a horizontal line between dashboard and footer

@@ -1,0 +1,17 @@
+.cards{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+}
+.area{
+    margin: 20px 0px 20px 0px;
+    padding: 5px;
+}
+.tablepie{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 5px;
+}

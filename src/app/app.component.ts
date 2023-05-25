@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'admin_dashboard';
+
+  sidebaropen:boolean=true
+
+  toggle(){
+    this.sidebaropen=!this.sidebaropen
+  }
 }

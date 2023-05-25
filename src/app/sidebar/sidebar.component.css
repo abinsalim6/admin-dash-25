@@ -1,0 +1,47 @@
+.profile img{
+  height: 10vh;
+  width: 10vh;
+  object-fit: contain;
+}
+.profile{
+    padding: 10px;
+    text-align: center;
+}
+.pages {
+    display: flex;
+    flex-direction: column;
+}
+.pages a{
+    height: 35px;
+    padding:10px 0px 0px 10px;
+    text-decoration: none;
+    color: black;
+}
+.pages a:hover{
+    background-color: blueviolet;
+}
+.tools a{
+    text-decoration: none;
+    color: black;
+}
+.tools div{
+    padding: 5px;
+    
+}
+.tools{
+    display: flex;
+    flex-direction: column;
+}
+.tools div:hover{
+    background-color: blueviolet;
+}
+
+h2{
+    font-weight: 300px;
+    padding-left: 5px;
+    margin-bottom: 0;
+}
+mat-icon{
+    vertical-align: middle;
+    padding: 5px;
+}

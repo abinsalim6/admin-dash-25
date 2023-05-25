@@ -1,0 +1,67 @@
+basic commands
+
+ng new file_name  (create new file)
+ng s -o  (to run an angular project)
+ng g c component_name (ng generate component a new component)
+ng g s folder_name/service_name (to generate Services)
+ng build ()
+
+basic concepts
+compilers:
+    Ahead of time(AOT)compilation: used in angular9+ verisions
+        html+ts code --> js code (transpiling)
+
+module - to import 3rd party libraries and to hold the components
+component - html,css,ts (for 10 pages in angular we need 10 components)
+
+selector - to replace selector tag with its html page
+decorator - hold metadata, starts with@
+
+set up path for component - to view a component in another page
+    -use app-routing.module.ts
+    -use router-outlet selector in root component(App component)- to navigate according to the user requested path
+
+Data Binding - data sharing within a component(between css html ts)
+    - one way binding: data sahring in one direction( at a time either ts-->html or html-->ts)
+        - ts(generally referred as component) --> html(generally referred as view)
+            -string interpolation: {{class_property_name}}
+            -property binding: [attribute_name]="class_property name"
+        -html-->ts 
+            -event binding: (event_name)="function_name()"
+            -event binding using $event: (event_name)="function_name($event)"
+            -event binding using template reference variable: #variable_name
+
+    - two way binding: data sharing in both direction
+            - ngModel : import Formsmodule in appmodule
+                [(ngModel)]="class_property_name"
+Angular Forms:
+    -template driven Forms
+    -modal driven Forms
+
+Dependency Injection: To share data between dependent class 
+    constructor(access_specifier variable_name:depenent_class_name){
+        
+    }
+
+Angular Services : Share data between userdefined components also share common logic to different components
+
+Angular Directives : capable of DOM(Document Object Model - Model seen in browser) Manipulation
+    -Component Directive : 
+    -Structural Directive : to add/remove html elements
+        - *ngFor = "let i of array_name" 
+    -Attribute Directive
+        -ngClass : style can be changed according to class property
+
+Parent child data sharing
+    - child to parent comm : create an event in child --> create another event inside event using EventEmitter() and Emit() --> call using @output() in child object
+
+            @Output() onMenubtnclick = new EventEmitter()
+
+                    menubtnclicked(){
+                    this.onMenubtnclick.emit()
+                    }
+
+    - parent to child comm : use @input() in child object
+
+
+    note: use routerLink=""  insteadof  href=""   for not refreshing the present page
